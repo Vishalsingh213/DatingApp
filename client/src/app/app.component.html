@@ -1,78 +1,12 @@
-<div>
-  Hello
 
-</div>
-<div class="col-md-6 mb-4">
-
-  <div class="card shadow h-100">
-    <div class="card-body my-n3">
-    <div class="row align-items-center">
-      <div class="col-3 text-center">
-        <span class="circle circle-lg bg-light">
-          <i class="fe fe-package fe-24 text-primary"></i>
-        </span>
-      </div>
-      <div class="col">
-        <a routerLink="/edi-manager/edi">
-          <h3 class="h5 mt-4 mb-1">EDI Manager</h3>
-        </a>
-        <p class="text-muted">
-          Configure outbound Electronic Data Interchange (EDI)
-          such as 837 submission.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a
-    routerLink="/edi-manager/edi"
-      class="d-flex justify-content-between text-muted"
-      >
-      <span>Edit Configuration</span>
-      <i class="fe fe-chevron-right"></i>
-    </a>
-  </div>
-</div>
-
-<div
-  class="card shadow h-100 bg-light-diabled"
-  >
-  <div class="card-body my-n3">
-    <div class="row align-items-center">
-      <div class="col-3 text-center">
-        <span class="circle circle-lg bg-light">
-          <i class="fe fe-package fe-24 text-primary"></i>
-        </span>
-      </div>
-      <div class="col">
-        <a>
-          <h3 class="h5 mt-4 mb-1">EDI Manager</h3>
-        </a>
-        <p class="text-muted">
-          Configure outbound Electronic Data Interchange (EDI)
-          such as 837 submission.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer bg-light-diabled">
-    <a class="d-flex justify-content-between text-muted">
-      <span>Edit Configuration</span>
-      <i class="fe fe-chevron-right"></i>
-    </a>
-  </div>
-</div>
-
-</div>
 
   <h1>Dating App</h1>
 
-
+<ng-template [ngIf]="display">
+  <H3>Inside the ng template tag</H3>
   <ul>
-  <li *ngFor="let user of users" >
-  {{user.id}}-{{user.userName}}
-
-  
-  </li>
-
+    <li *ngFor="let user of users" >
+      {{user.id}}-{{user.userName}}
+    </li>    
   </ul>
+</ng-template>

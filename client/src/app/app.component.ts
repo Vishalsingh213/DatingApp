@@ -16,9 +16,13 @@ export class AppComponent implements OnInit{
     this.getUsers();  
   }
 
+  display : boolean = true;
+  
   getUsers()
   {
-    this.http.get("https://localhost:5001/api/users").subscribe(response => {
+    debugger;
+    this.http.get("https://localhost:5001/api/register").subscribe(response => {
+      debugger;
       this.users =response;
     },error =>{
       console.log(error);
